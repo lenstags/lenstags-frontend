@@ -241,7 +241,7 @@ const Details: FC<Props> = ({ profile }) => {
           
         )}
         <div className="w-full divider" />
-        <a><img src="" alt="" /> D</a>
+        
         <div className="w-full divider" />
       
         <div className="space-y-2">
@@ -267,10 +267,8 @@ const Details: FC<Props> = ({ profile }) => {
             <div className="w-full divider hover:bg-300-lime" />
               <p className='pl-5 hover:bg-lime-300 w-full text-left'>TAGS</p>
             <div className="w-full divider" />
-          
         </div>
           
-  
         </div>
       </div>
 

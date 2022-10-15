@@ -32,8 +32,8 @@ const Navbar: FC = () => {
           className={clsx(
             'w-full text-left px-2 md:px-3 py-1 rounded-md font-bold cursor-pointer text-sm tracking-wide',
             {
-              'text-black dark:text-white bg-gray-200 dark:bg-gray-800': current,
-              'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800':
+              'text-black dark:text-white bg-gray-200 dark:bg-lime-800': current,
+              'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-lime-200 dark:hover:bg-lime-800':
                 !current
             }
           )}
@@ -49,9 +49,9 @@ const Navbar: FC = () => {
 
     return (
       <>
-        <NavItem url="/" name="Home" current={pathname == '/'} />
-        <NavItem url="/explore" name="Explore" current={pathname == '/explore'} />
-        <MoreNavItems />
+        <NavItem url="/" name="EXPLORER" current={pathname == '/'} />
+        <NavItem url="/explore" name="ORGANIZATION" current={pathname == '/explore'} />
+        
       </>
     );
   };
@@ -59,12 +59,12 @@ const Navbar: FC = () => {
   return (
     <Disclosure
       as="header"
-      className="sticky top-0 z-10 w-full bg-white border-b dark:bg-gray-900 dark:border-b-gray-700/80"
+      className="sticky top-0 z-10 w-full bg-white border-b dark:bg-gray-900 dark:border-b-gray-700/80 bg-lime-400"
     >
       {({ open }) => (
         <>
           {staffMode && <StaffBar />}
-          <div className="container px-5 mx-auto max-w-screen-xl">
+          <div className="container px-5 mx-auto max-w-screen-xl ">
             <div className="flex relative justify-between items-center h-14 sm:h-16">
               <div className="flex justify-start items-center">
                 <Disclosure.Button className="inline-flex justify-center items-center mr-4 text-gray-500 rounded-md sm:hidden focus:outline-none">
@@ -76,18 +76,18 @@ const Navbar: FC = () => {
                   )}
                 </Disclosure.Button>
                 <Link href="/">
-                  <img
+                 { /*<img
                     className="w-8 h-8"
                     height={32}
                     width={32}
                     src={currentProfile && hasPrideLogo(currentProfile) ? '/pride.svg' : '/logo.svg'}
                     alt="Logo"
-                  />
+                  /> */} #
                 </Link>
-                <div className="hidden sm:block sm:ml-6">
+                <div className="hidden sm:block sm:ml-6 ">
                   <div className="flex items-center space-x-4">
                     <div className="hidden lg:block">
-                      <Search />
+                      {/*<Search />*/}
                     </div>
                     <NavItems />
                   </div>

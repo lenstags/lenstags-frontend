@@ -94,6 +94,7 @@ const Layout: FC<Props> = ({ children }) => {
     return <Loading />;
   }
 
+  console.log(children, 'CHILD')
   return (
     <>
       <Head>

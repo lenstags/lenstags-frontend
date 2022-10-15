@@ -15,8 +15,8 @@ const MoreNavItems: FC = () => {
             className={clsx(
               'w-full text-left px-2 md:px-3 py-1 rounded-md font-bold cursor-pointer text-sm tracking-wide',
               {
-                'text-black dark:text-white bg-gray-200 dark:bg-gray-800': open,
-                'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800':
+                'text-black dark:text-white bg-gray-200 dark:bg-lime-600': open,
+                'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-lime-300 dark:hover:bg-lime-800':
                   !open
               }
             )}
@@ -35,7 +35,7 @@ const MoreNavItems: FC = () => {
           >
             <Menu.Items
               static
-              className="absolute py-1 mt-2 w-52 bg-white rounded-xl border shadow-sm dark:bg-gray-900 focus:outline-none dark:border-gray-700/80"
+              className="absolute py-1 mt-2 w-52 bg-white rounded-xl border shadow-sm dark:bg-lime-900 focus:outline-none dark:border-lime-700/80"
             >
               <Menu.Item
                 as={NextLink}

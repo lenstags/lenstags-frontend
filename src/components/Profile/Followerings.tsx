@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { Modal } from '@components/UI/Modal';
 import type { Profile } from '@generated/types';
 import { UsersIcon } from '@heroicons/react/outline';

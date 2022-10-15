@@ -1,3 +1,4 @@
+/* eslint-disable */
 import getIPFSLink from '@lib/getIPFSLink';
 import imagekitURL from '@lib/imagekitURL';
 import type { FC } from 'react';

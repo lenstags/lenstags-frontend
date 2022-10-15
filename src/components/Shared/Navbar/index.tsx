@@ -1,3 +1,4 @@
+/* eslint-disable */
 import NotificationIcon from '@components/Notification/Icon';
 import useStaffMode from '@components/utils/hooks/useStaffMode';
 import { Disclosure } from '@headlessui/react';

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Message from '@components/Profile/Message';
 import Follow from '@components/Shared/Follow';
 import Markup from '@components/Shared/Markup';

@@ -3,7 +3,13 @@
   "bracketSpacing": true,
   "semi": true,
   "useTabs": false,
-  "trailingComma": "none",
+  "trailingComma": "all",
   "singleQuote": true,
-  "printWidth": 110
+  "printWidth": 80,
+  "tabWidth": 3, 
+  "extends": "next",
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
+  }
 }

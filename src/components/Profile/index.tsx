@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useQuery } from '@apollo/client';
 import { GridItemEight, GridItemFour, GridLayout } from '@components/UI/GridLayout';
 import MetaTags from '@components/utils/MetaTags';

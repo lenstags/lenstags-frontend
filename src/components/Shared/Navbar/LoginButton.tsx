@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Button } from '@components/UI/Button';
 import { Modal } from '@components/UI/Modal';
 import { ArrowCircleRightIcon } from '@heroicons/react/outline';

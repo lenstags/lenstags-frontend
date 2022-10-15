@@ -1,3 +1,4 @@
+/* eslint-disable */
 import TabButton from '@components/UI/TabButton';
 import type { ProfileStats } from '@generated/types';
 import { ChatAlt2Icon, FilmIcon, PencilAltIcon, PhotographIcon } from '@heroicons/react/outline';

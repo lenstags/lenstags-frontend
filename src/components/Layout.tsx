@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useQuery } from '@apollo/client';
 import type { Profile } from '@generated/types';
 import { ReferenceModules, UserProfilesDocument } from '@generated/types';

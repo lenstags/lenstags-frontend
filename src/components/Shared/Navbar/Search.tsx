@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useLazyQuery } from '@apollo/client';
 import { Card } from '@components/UI/Card';
 import { Input } from '@components/UI/Input';

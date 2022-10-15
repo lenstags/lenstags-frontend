@@ -48,12 +48,12 @@ const Navbar: FC = () => {
     const { pathname } = useRouter();
 
     return (
-      <>
-        <NavItem url="/" name="EXPLORER" current={pathname == '/'} />
-        <NavItem url="/explore" name="ORGANIZATION" current={pathname == '/explore'} />
-        
-      </>
-    );
+      <div className='flex w-full'>
+          <NavItem url="/" name="EXPLORER" current={pathname == '/'} />
+          <NavItem url="/explore" name="ORGANIZATION" current={pathname == '/explore'} />
+            
+      </div>
+    );  
   };
 
   return (
@@ -64,8 +64,8 @@ const Navbar: FC = () => {
       {({ open }) => (
         <>
           {staffMode && <StaffBar />}
-          <div className="container px-5 mx-auto max-w-screen-xl ">
-            <div className="flex relative justify-between items-center h-14 sm:h-16">
+          <div className="container px-5 mx-auto max-w-screen-xl border-black border-2 ">
+            <div className="flex relative justify-between items-center h-14 sm:h-16 ">
               <div className="flex justify-start items-center">
                 <Disclosure.Button className="inline-flex justify-center items-center mr-4 text-gray-500 rounded-md sm:hidden focus:outline-none">
                   <span className="sr-only">Open main menu</span>
@@ -85,7 +85,7 @@ const Navbar: FC = () => {
                   /> */} #
                 </Link>
                 <div className="hidden sm:block sm:ml-6 ">
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-">
                     <div className="hidden lg:block">
                       {/*<Search />*/}
                     </div>

@@ -53,7 +53,7 @@ const Details: FC<Props> = ({ profile }) => {
   const followType = profile?.followModule?.__typename;
 
   return (
-    <div className="px-5 mb-4 space-y-5 sm:px-0">
+    <div className="px-5 mb-4 space-y-5 sm:px-0  border-2 pl-5 pr-5 border-black border-2 ">
       
       <div className=" relative -mt-24 h-32 sm:-mt-32 sm:h-52 flex w-full">
         <div className="mx-auto">
@@ -132,8 +132,8 @@ const Details: FC<Props> = ({ profile }) => {
           ) : null}
         </div>
         {profile?.bio && (
-          <div className="mr-0 sm:mr-10 leading-md linkify text-md text-center">
-            <div>
+          <div className="mr-0 sm:mr-10 leading-md linkify text-md text-center w-full">
+            <div className='text-center w-full pl-3 pr-3'>
               <Markup>{profile?.bio}</Markup>
             </div>
           </div>

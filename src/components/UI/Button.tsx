@@ -22,11 +22,11 @@ export const Button = forwardRef<HTMLButtonElement, Props>(function Button(
       ref={ref}
       className={clsx(
         {
-          'bg-lime-300 hover:bg-lime-500 border border-lime-500 text-white focus:ring-lime-300':
+          'bg-lime-400 hover:bg-lime-500 border border-lime-500 text-white focus:ring-lime-300':
             !outline && !light && variant === 'primary',
-          'bg-lime-300 hover:bg-gray-600 border border-gray-600 text-white focus:ring-gray-400':
+          'bg-lime-400 hover:bg-gray-600 border border-gray-600 text-white focus:ring-gray-400':
             !outline && !light && variant === 'secondary',
-          'bg-lime-300 hover:bg-green-400 border border-green-600 text-white focus:ring-green-400':
+          'bg-lime-400 hover:bg-green-400 border border-green-600 text-white focus:ring-green-400':
             !outline && !light && variant === 'success',
           'bg-lime-300 hover:bg-yellow-400 border border-yellow-600 text-white focus:ring-yellow-400':
             !outline && !light && variant === 'warning',
@@ -34,11 +34,11 @@ export const Button = forwardRef<HTMLButtonElement, Props>(function Button(
             !outline && !light && variant === 'super',
           'bg-red-500 hover:bg-red-400 border border-red-600 text-white focus:ring-red-400':
             !outline && !light && variant === 'danger',
-          'border border-brand-500 text-brand hover:bg-brand-100 focus:ring-brand-400':
+          'border border-lime-500 text-brand hover:bg-brand-100 focus:ring-lime-400':
             outline && !light && variant === 'primary',
           'border border-gray-500 text-gray-500 hover:bg-gray-100 focus:ring-gray-400':
             outline && !light && variant === 'secondary',
-          'border border-green-500 text-green-500 hover:bg-green-100 focus:ring-green-400':
+          'border border-lime-500 text-lime-500 hover:bg-green-100 focus:ring-limes-400':
             outline && !light && variant === 'success',
           'border border-yellow-500 text-yellow-500 hover:bg-yellow-100 focus:ring-yellow-400':
             outline && !light && variant === 'warning',

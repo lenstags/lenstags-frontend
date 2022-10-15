@@ -11,7 +11,7 @@ const Slug: FC<Props> = ({ slug, prefix, className = '' }) => {
   return (
     <span
       className={clsx(
-        'text-transparent bg-clip-text bg-gradient-to-r from-brand-600 dark:from-brand-400 to-pink-600 dark:to-pink-400 text-xs sm:text-sm',
+        'text-transparent bg-clip-text bg-gradient-to-r from-lime-400 dark:from-lime-300 to-lime-700 dark:to-lime-400 text-xs sm:text-sm',
         className
       )}
     >

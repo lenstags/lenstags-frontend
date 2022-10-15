@@ -54,6 +54,7 @@ const Details: FC<Props> = ({ profile }) => {
 
   return (
     <div className="px-5 mb-4 space-y-5 sm:px-0">
+      
       <div className=" relative -mt-24 h-32 sm:-mt-32 sm:h-52 flex w-full">
         <div className="mx-auto">
           <img
@@ -65,11 +66,12 @@ const Details: FC<Props> = ({ profile }) => {
             />
         </div>
       </div>
+
       <div className="py-2 space-y-1">
         <div className="flex gap-1.5 items-center text-2xl font-bold">
           <div className=" flex w-full">
             <div className='mx-auto'>
-            {profile?.name ?? profile?.handle}
+              {profile?.name ?? profile?.handle}
             </div>
           </div>
           {isVerified(profile?.id) && (
@@ -80,7 +82,9 @@ const Details: FC<Props> = ({ profile }) => {
         </div>
         <div className="flex items-center space-x-3">
           {profile?.name ? (
-            <Slug className="!text-sm sm:!text-base" slug={profile?.handle} prefix="@" />
+            <div className='text-center w-full'>
+                <Slug className="!text-sm sm:!text-base" slug={profile?.handle} prefix="@" />
+            </div>
           ) : (
             <Slug className="!text-sm sm:!text-base" slug={formatAddress(profile?.ownedBy)} />
           )}
@@ -89,6 +93,7 @@ const Details: FC<Props> = ({ profile }) => {
           )}
         </div>
       </div>
+
       <div className="space-y-5">
         <div className='flex w-full'>
           <div className='mx-auto'>
@@ -268,8 +273,10 @@ const Details: FC<Props> = ({ profile }) => {
   
         </div>
       </div>
+
       <Badges profile={profile} />
       {isStaff(currentProfile?.id) && staffMode && <ProfileStaffTool profile={profile} />}
+  
     </div>
   );
 };

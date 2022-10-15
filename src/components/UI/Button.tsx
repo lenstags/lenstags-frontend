@@ -22,13 +22,13 @@ export const Button = forwardRef<HTMLButtonElement, Props>(function Button(
       ref={ref}
       className={clsx(
         {
-          'bg-lime-400 hover:bg-lime-500 border border-lime-500 text-white focus:ring-lime-400':
+          'bg-primary hover:bg-hoverPrimary border border-hoverPrimary text-white focus:ring-primary':
             !outline && !light && variant === 'primary',
-          'bg-lime-400 hover:bg-gray-600 border border-gray-600 text-white focus:ring-gray-400':
+          'bg-primary hover:bg-gray-600 border border-gray-600 text-white focus:ring-gray-400':
             !outline && !light && variant === 'secondary',
-          'bg-lime-400 hover:bg-green-400 border border-green-600 text-white focus:ring-green-400':
+          'bg-primary hover:bg-hoverPrimary border border-primary text-white focus:ring-primary':
             !outline && !light && variant === 'success',
-          'bg-lime-400 hover:bg-yellow-400 border border-yellow-600 text-white focus:ring-yellow-400':
+          'bg-primary hover:bg-yellow-400 border border-yellow-600 text-white focus:ring-yellow-400':
             !outline && !light && variant === 'warning',
           'bg-pink-500 hover:bg-pink-400 border border-pink-600 text-white focus:ring-pink-400':
             !outline && !light && variant === 'super',
@@ -38,7 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(function Button(
             outline && !light && variant === 'primary',
           'border border-gray-500 text-gray-500 hover:bg-gray-100 focus:ring-gray-400':
             outline && !light && variant === 'secondary',
-          'border border-lime-500 text-lime-500 hover:bg-green-100 focus:ring-limes-400':
+          'border bg-primary border-black text-black hover:bg-green-100 focus:ring-limes-400':
             outline && !light && variant === 'success',
           'border border-yellow-500 text-yellow-500 hover:bg-yellow-100 focus:ring-yellow-400':
             outline && !light && variant === 'warning',

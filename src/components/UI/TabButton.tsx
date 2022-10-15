@@ -16,15 +16,15 @@ const TabButton: FC<Props> = ({ name, icon, active, count, onClick }) => {
       type="button"
       onClick={onClick}
       className={clsx(
-        { 'text-black bg-lime-300 dark:bg-opacity-20 bg-opacity-100 font-bold w-full': active },
-        'flex w-full items-center space-x-2 px-4 sm:px-3 py-2 sm:py-1 text-black hover:bg-lime-500 dark:hover:bg-opacity-20 hover:bg-opacity-100'
+        { 'text-black dark:bg-opacity-20 bg-primary bg-opacity-100 font-bold w-full': active },
+        'flex w-full items-center space-x-2 px-4 sm:px-3 py-2 sm:py-1 text-black hover:bg-hoverPrimary dark:hover:bg-opacity-20 hover:bg-opacity-100'
       )}
       aria-label={name}
     >
       {icon}
       <span className="hidden sm:block">{name}</span>
       {count ? (
-        <span className=" text-xs rounded-full bg-lime-300 dark:bg-lime-500">{nFormatter(count)}</span>
+        <span className=" text-xs rounded-full bg-primary dark:bg-primary">{nFormatter(count)}</span>
       ) : null}
     </button>
   );

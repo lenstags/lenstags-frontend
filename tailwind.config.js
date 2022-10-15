@@ -11,7 +11,9 @@ module.exports = {
         green: colors.emerald,
         purple: colors.violet,
         yellow: colors.yellow,
-        brand: colors.violet
+        brand: colors.violet,
+        primary: '#def702',
+        hoverPrimary: '#a5b420'
       }
     }
   },

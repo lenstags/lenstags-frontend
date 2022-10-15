@@ -249,24 +249,24 @@ const Details: FC<Props> = ({ profile }) => {
           
         <div>
         
-            <div className="w-full divider hover:bg-300-lime" />
-              <p className='pl-5 hover:bg-lime-300 w-full text-left'>MY COLLECTIONS</p>
+            <div className="w-full divider hover:bg-primary" />
+              <p className='pl-5 hover:bg-primary w-full text-left'>MY COLLECTIONS</p>
             <div className="w-full divider" />
          
-            <div className="w-full divider hover:bg-300-lime" />
-                  <p className='pl-5 hover:bg-lime-300 w-full text-left'>CREATIONS</p>
+            <div className="w-full divider" />
+                  <p className='pl-5 hover:bg-primary w-full text-left'>CREATIONS</p>
             <div className="w-full divider" />
          
             <div className="w-full divider"/>
-              <p className='pl-5 hover:bg-lime-300 w-full text-left'>BADGES</p>
+              <p className='pl-5 hover:bg-primary w-full text-left'>BADGES</p>
             <div className="w-full divider" />
        
-            <div className="w-full divider hover:bg-300-lime" />
-              <p className='pl-5 hover:bg-lime-300 w-full text-left'>LISTS</p>
+            <div className="w-full divider" />
+              <p className='pl-5 hover:bg-primary w-full text-left'>LISTS</p>
             <div className="w-full divider" />
     
-            <div className="w-full divider hover:bg-300-lime" />
-              <p className='pl-5 hover:bg-lime-300 w-full text-left'>TAGS</p>
+            <div className="w-full divider" />
+              <p className='pl-5 hover:bg-primary w-full text-left'>TAGS</p>
             <div className="w-full divider" />
         </div>
           

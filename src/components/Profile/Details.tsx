@@ -41,6 +41,8 @@ const Details: FC<Props> = ({ profile }) => {
   const { allowed: staffMode } = useStaffMode();
   const { resolvedTheme } = useTheme();
 
+
+
   const MetaDetails = ({ children, icon }: { children: ReactElement; icon: ReactElement }) => (
     <div className="flex gap-2 items-center">
       {icon}
@@ -52,18 +54,24 @@ const Details: FC<Props> = ({ profile }) => {
 
   return (
     <div className="px-5 mb-4 space-y-5 sm:px-0">
-      <div className="relative -mt-24 w-32 h-32 sm:-mt-32 sm:w-52 sm:h-52">
-        <img
-          src={getAvatar(profile)}
-          className="w-32 h-32 bg-gray-200 rounded-xl ring-8 ring-gray-50 sm:w-52 sm:h-52 dark:bg-gray-700 dark:ring-black"
-          height={128}
-          width={128}
-          alt={profile?.handle}
-        />
+      <div className=" relative -mt-24 h-32 sm:-mt-32 sm:h-52 flex w-full">
+        <div className="mx-auto">
+          <img
+              src={getAvatar(profile)}
+              className="w-32 h-32 bg-gray-200 rounded-xl ring-8 ring-gray-50 sm:w-52 sm:h-52 dark:bg-gray-700 dark:ring-black"
+              height={128}
+              width={128}
+              alt={profile?.handle}
+            />
+        </div>
       </div>
       <div className="py-2 space-y-1">
         <div className="flex gap-1.5 items-center text-2xl font-bold">
-          <div className="truncate">{profile?.name ?? profile?.handle}</div>
+          <div className=" flex w-full">
+            <div className='mx-auto'>
+            {profile?.name ?? profile?.handle}
+            </div>
+          </div>
           {isVerified(profile?.id) && (
             <Tooltip content="Verified">
               <BadgeCheckIcon className="w-6 h-6 text-brand" />
@@ -82,7 +90,11 @@ const Details: FC<Props> = ({ profile }) => {
         </div>
       </div>
       <div className="space-y-5">
-        <Followerings profile={profile} />
+        <div className='flex w-full'>
+          <div className='mx-auto'>
+            <Followerings profile={profile} />
+          </div>
+        </div>
         <div>
           {currentProfile?.id === profile?.id ? (
             <Link href="/settings">
@@ -105,20 +117,26 @@ const Details: FC<Props> = ({ profile }) => {
                 {isFeatureEnabled('messages', currentProfile?.id) && <Message profile={profile} />}
               </div>
             ) : (
-              <div className="flex space-x-2">
-                <Follow profile={profile} setFollowing={setFollowing} showText />
-                {isFeatureEnabled('messages', currentProfile?.id) && <Message profile={profile} />}
+              <div className="flex space-x-2 w-full ">
+                <div className='mx-auto'>
+                  <Follow profile={profile} setFollowing={setFollowing} showText />
+                  {isFeatureEnabled('messages', currentProfile?.id) && <Message profile={profile} />}
+                </div>
               </div>
             )
           ) : null}
         </div>
         {profile?.bio && (
-          <div className="mr-0 sm:mr-10 leading-md linkify text-md">
-            <Markup>{profile?.bio}</Markup>
+          <div className="mr-0 sm:mr-10 leading-md linkify text-md text-center">
+            <div>
+              <Markup>{profile?.bio}</Markup>
+            </div>
           </div>
         )}
         {currentProfile?.id !== profile?.id && (
+          /* DESCRIPTION */
           <>
+          
             <MutualFollowers setShowMutualFollowersModal={setShowMutualFollowersModal} profile={profile} />
             <Modal
               title="Followers you know"
@@ -128,17 +146,13 @@ const Details: FC<Props> = ({ profile }) => {
             >
               <MutualFollowersList profileId={profile?.id} />
             </Modal>
-          </>
-        )}
-        <div className="w-full divider" />
-        <div className="space-y-2">
-          <MetaDetails icon={<HashtagIcon className="w-4 h-4" />}>
-            <Tooltip content={`#${parseInt(profile?.id)}`}>{profile?.id}</Tooltip>
-          </MetaDetails>
-          {getAttribute(profile?.attributes, 'location') && (
+          
+            <div className='flex w-full justify-center'>
+            {getAttribute(profile?.attributes, 'location') && (
             <MetaDetails icon={<LocationMarkerIcon className="w-4 h-4" />}>
               {getAttribute(profile?.attributes, 'location') as any}
             </MetaDetails>
+            
           )}
           {profile?.onChainIdentity?.ens?.name && (
             <MetaDetails
@@ -151,10 +165,11 @@ const Details: FC<Props> = ({ profile }) => {
                   alt="ENS Logo"
                 />
               }
-            >
+            > 
               {profile?.onChainIdentity?.ens?.name}
             </MetaDetails>
           )}
+
           {getAttribute(profile?.attributes, 'website') && (
             <MetaDetails
               icon={
@@ -182,7 +197,9 @@ const Details: FC<Props> = ({ profile }) => {
                 {getAttribute(profile?.attributes, 'website')?.replace('https://', '').replace('http://', '')}
               </a>
             </MetaDetails>
+            
           )}
+          
           {getAttribute(profile?.attributes, 'twitter') && (
             <MetaDetails
               icon={
@@ -214,6 +231,41 @@ const Details: FC<Props> = ({ profile }) => {
               </a>
             </MetaDetails>
           )}
+            </div>
+          </>
+          
+        )}
+        <div className="w-full divider" />
+        <a><img src="" alt="" /> D</a>
+        <div className="w-full divider" />
+      
+        <div className="space-y-2">
+          
+        <div>
+        
+            <div className="w-full divider hover:bg-300-lime" />
+              <p className='pl-5 hover:bg-lime-300 w-full text-left'>MY COLLECTIONS</p>
+            <div className="w-full divider" />
+         
+            <div className="w-full divider hover:bg-300-lime" />
+                  <p className='pl-5 hover:bg-lime-300 w-full text-left'>CREATIONS</p>
+            <div className="w-full divider" />
+         
+            <div className="w-full divider"/>
+              <p className='pl-5 hover:bg-lime-300 w-full text-left'>BADGES</p>
+            <div className="w-full divider" />
+       
+            <div className="w-full divider hover:bg-300-lime" />
+              <p className='pl-5 hover:bg-lime-300 w-full text-left'>LISTS</p>
+            <div className="w-full divider" />
+    
+            <div className="w-full divider hover:bg-300-lime" />
+              <p className='pl-5 hover:bg-lime-300 w-full text-left'>TAGS</p>
+            <div className="w-full divider" />
+          
+        </div>
+          
+  
         </div>
       </div>
       <Badges profile={profile} />
@@ -223,3 +275,7 @@ const Details: FC<Props> = ({ profile }) => {
 };
 
 export default Details;
+
+/*<MetaDetails icon={<HashtagIcon className="w-4 h-4" />}>
+            <Tooltip content={`#${parseInt(profile?.id)}`}>{profile?.id}</Tooltip>
+          </MetaDetails> */

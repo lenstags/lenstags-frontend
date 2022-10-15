@@ -41,6 +41,12 @@ const Followerings: FC<Props> = ({ profile }) => {
       >
         <div className="text-xl">{humanize(profile?.stats?.totalFollowers)}</div>
         <div className="text-gray-500">Followers</div>
+
+        
+      </button>
+      <button>
+        <div className="text-xl">10000</div>
+        <div className="text-gray-500">lesting</div>
       </button>
       <Modal
         title="Following"
@@ -55,7 +61,7 @@ const Followerings: FC<Props> = ({ profile }) => {
         icon={<UsersIcon className="w-5 h-5 text-brand" />}
         show={showFollowersModal}
         onClose={() => setShowFollowersModal(false)}
-      >
+      > 
         <Followers profile={profile} />
       </Modal>
     </div>

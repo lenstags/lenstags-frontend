@@ -23,6 +23,7 @@ const LoginButton: FC = () => {
       </Modal>
       <Button
         icon={<img className="mr-0.5 w-4 h-4" height={16} width={16} src="/lens.png" alt="Lens Logo" />}
+        className = "bg-lime-300"
         onClick={() => {
           setShowLoginModal(!showLoginModal);
           Leafwatch.track(USER.LOGIN);

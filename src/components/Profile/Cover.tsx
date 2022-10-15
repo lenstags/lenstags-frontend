@@ -9,6 +9,8 @@ interface Props {
 
 const Cover: FC<Props> = ({ cover }) => {
   return (
+
+    // PicturE
     <div
       className="h-52 sm:h-80"
       style={{

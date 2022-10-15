@@ -13,9 +13,12 @@ interface Props {
 
 const FeedType: FC<Props> = ({ stats, setFeedType, feedType }) => {
   return (
+
+    // OPTIONS FOR SEEING POSTS
+
     <div className="flex overflow-x-auto gap-3 px-5 pb-2 mt-3 sm:px-0 sm:mt-0 md:pb-0">
       <TabButton
-        name="Feed"
+        name="POST"
         icon={<PencilAltIcon className="w-4 h-4" />}
         active={feedType === 'FEED'}
         count={stats?.totalPosts + stats?.totalMirrors}
@@ -25,7 +28,7 @@ const FeedType: FC<Props> = ({ stats, setFeedType, feedType }) => {
         }}
       />
       <TabButton
-        name="Replies"
+        name="COLLECTIONS"
         icon={<ChatAlt2Icon className="w-4 h-4" />}
         active={feedType === 'REPLIES'}
         count={stats?.totalComments}
@@ -34,24 +37,7 @@ const FeedType: FC<Props> = ({ stats, setFeedType, feedType }) => {
           Leafwatch.track(PROFILE.SWITCH_REPLIES);
         }}
       />
-      <TabButton
-        name="Media"
-        icon={<FilmIcon className="w-4 h-4" />}
-        active={feedType === 'MEDIA'}
-        onClick={() => {
-          setFeedType('MEDIA');
-          Leafwatch.track(PROFILE.SWITCH_MEDIA);
-        }}
-      />
-      <TabButton
-        name="NFTs"
-        icon={<PhotographIcon className="w-4 h-4" />}
-        active={feedType === 'NFT'}
-        onClick={() => {
-          setFeedType('NFT');
-          Leafwatch.track(PROFILE.SWITCH_NFTS);
-        }}
-      />
+      
     </div>
   );
 };

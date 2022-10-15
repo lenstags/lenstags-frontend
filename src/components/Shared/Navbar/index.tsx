@@ -57,14 +57,16 @@ const Navbar: FC = () => {
   };
 
   return (
-    <Disclosure
+    
+    <>
+      <Disclosure
       as="header"
-      className="sticky top-0 z-10 w-full bg-white border-b dark:bg-gray-900 dark:border-b-gray-700/80 bg-lime-400"
+      className="sticky top-0 z-10 w-full bg-white border-b dark:bg-gray-900 dark:border-b-gray-700/80 bg-lime-400 border-black border-2"
     >
       {({ open }) => (
         <>
           {staffMode && <StaffBar />}
-          <div className="container px-5 mx-auto max-w-screen-xl border-black border-2 ">
+          <div className="container px-5 mx-auto max-w-screen-xl ">
             <div className="flex relative justify-between items-center h-14 sm:h-16 ">
               <div className="flex justify-start items-center">
                 <Disclosure.Button className="inline-flex justify-center items-center mr-4 text-gray-500 rounded-md sm:hidden focus:outline-none">
@@ -109,7 +111,7 @@ const Navbar: FC = () => {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:hidden ">
             <div className="flex flex-col p-3 space-y-2">
               <div className="mb-2">
                 <Search hideDropdown />
@@ -117,9 +119,23 @@ const Navbar: FC = () => {
               <NavItems />
             </div>
           </Disclosure.Panel>
+
         </>
       )}
-    </Disclosure>
+      </Disclosure>
+      <div className='border-black border-b-2 border-r-2 border-l-2 flex'>
+        <div className='w-1/4 text-center pt-2 border-black border-r-2'>
+          <p>TAGGING CONTENT</p>
+        </div>
+        <div className='flex items-center space-x- w-1/2 border-black border-r-2'>
+          <Search/>
+        </div>
+        <div className='w-1/4'>
+
+        </div>
+      </div>
+    </>
+    
   );
 };
 

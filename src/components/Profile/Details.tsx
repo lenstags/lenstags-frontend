@@ -53,6 +53,7 @@ const Details: FC<Props> = ({ profile }) => {
   const followType = profile?.followModule?.__typename;
 
   return (
+    
     <div className="px-5 mb-4 space-y-5 sm:px-0  border-2 pl-5 pr-5 border-black border-2 ">
       
       <div className=" relative -mt-24 h-32 sm:-mt-32 sm:h-52 flex w-full">
@@ -272,10 +273,8 @@ const Details: FC<Props> = ({ profile }) => {
         </div>
       </div>
 
-      <Badges profile={profile} />
-      {isStaff(currentProfile?.id) && staffMode && <ProfileStaffTool profile={profile} />}
-  
     </div>
+
   );
 };
 

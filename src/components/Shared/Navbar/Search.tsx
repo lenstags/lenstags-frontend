@@ -62,11 +62,11 @@ const Search: FC<Props> = ({ hideDropdown = false }) => {
 
   return (
     <>
-      <div aria-hidden="true">
-        <form onSubmit={handleKeyDown}>
+      <div aria-hidden="true" className='w-full'>
+        <form onSubmit={handleKeyDown} >
           <Input
             type="text"
-            className="py-2 px-3 text-sm"
+            className="py-2 px-3 text-sm "
             placeholder="Search..."
             value={searchText}
             onFocus={() => Leafwatch.track(SEARCH.FOCUS)}

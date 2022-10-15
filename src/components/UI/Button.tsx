@@ -12,7 +12,7 @@ interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement
   children?: ReactNode;
   className?: string;
 }
-
+//prueba
 export const Button = forwardRef<HTMLButtonElement, Props>(function Button(
   { className = '', size = 'md', variant = 'primary', outline, light, loading, icon, children, ...rest },
   ref

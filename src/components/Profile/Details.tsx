@@ -153,25 +153,29 @@ const Details: FC<Props> = ({ profile }) => {
               <MutualFollowersList profileId={profile?.id} />
             </Modal>
           
-            <div className='flex w-full justify-center'>
             {getAttribute(profile?.attributes, 'location') && (
             <MetaDetails icon={<LocationMarkerIcon className="w-4 h-4" />}>
               {getAttribute(profile?.attributes, 'location') as any}
             </MetaDetails>
-            
           )}
-          
-
+          {profile?.onChainIdentity?.ens?.name && (
+            <MetaDetails
+              icon={
+                <img
+                  src={`${STATIC_ASSETS}/brands/ens.svg`}
+                  className="w-4 h-4"
+                  height={16}
+                  width={16}
+                  alt="ENS Logo"
+                />
+              }
+            >
+              {profile?.onChainIdentity?.ens?.name}
+            </MetaDetails>
+          )}
           {getAttribute(profile?.attributes, 'website') && (
             <MetaDetails
               icon={
-                <a
-                href={`https://${getAttribute(profile?.attributes, 'website')
-                  ?.replace('https://', '')
-                  .replace('http://', '')}`}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
                 <img
                   src={`https://www.google.com/s2/favicons?domain=${getAttribute(
                     profile?.attributes,
@@ -184,14 +188,19 @@ const Details: FC<Props> = ({ profile }) => {
                   width={16}
                   alt="Website"
                 />
-              </a>  
               }
             >
-              
+              <a
+                href={`https://${getAttribute(profile?.attributes, 'website')
+                  ?.replace('https://', '')
+                  .replace('http://', '')}`}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                {getAttribute(profile?.attributes, 'website')?.replace('https://', '').replace('http://', '')}
+              </a>
             </MetaDetails>
-            
           )}
-          
           {getAttribute(profile?.attributes, 'twitter') && (
             <MetaDetails
               icon={
@@ -204,26 +213,26 @@ const Details: FC<Props> = ({ profile }) => {
                     alt="Twitter Logo"
                   />
                 ) : (
-                  <a
-                  href={`https://twitter.com/${getAttribute(profile?.attributes, 'twitter')}`}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
                   <img
-                      src={`${STATIC_ASSETS}/brands/twitter-dark.svg`}
-                      className="w-4 h-4"
-                      height={16}
-                      width={16}
-                      alt="Twitter Logo"
-                    />
-                </a>
+                    src={`${STATIC_ASSETS}/brands/twitter-dark.svg`}
+                    className="w-4 h-4"
+                    height={16}
+                    width={16}
+                    alt="Twitter Logo"
+                  />
                 )
               }
             >
-             
+              <a
+                href={`https://twitter.com/${getAttribute(profile?.attributes, 'twitter')}`}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                {getAttribute(profile?.attributes, 'twitter')?.replace('https://twitter.com/', '')}
+              </a>
             </MetaDetails>
           )}
-            </div>
+            
           </>
           
         )}

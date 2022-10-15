@@ -157,3 +157,7 @@ body {
 iframe {
   @apply rounded-xl;
 }
+
+.color_bg{
+  background-color: #def702;
+}

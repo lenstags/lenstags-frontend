@@ -61,7 +61,7 @@ const Navbar: FC = () => {
     <>
       <Disclosure
       as="header"
-      className="sticky top-0 z-10 w-full bg-white border-b dark:bg-gray-900 dark:border-b-gray-700/80 bg-lime-400 border-black border-2"
+      className="sticky top-0 z-10 w-full  border-b dark:bg-gray-900 dark:border-b-gray-700/80 color_bg border-black border-2"
     >
       {({ open }) => (
         <>
@@ -78,13 +78,13 @@ const Navbar: FC = () => {
                   )}
                 </Disclosure.Button>
                 <Link href="/">
-                 { /*<img
+                  <img
                     className="w-8 h-8"
                     height={32}
                     width={32}
-                    src={currentProfile && hasPrideLogo(currentProfile) ? '/pride.svg' : '/logo.svg'}
+                    src={currentProfile && hasPrideLogo(currentProfile) ? 'https://i.ibb.co/F7DnmHH/Lengs-tags.jpg' : 'https://i.ibb.co/F7DnmHH/Lengs-tags.jpg'}
                     alt="Logo"
-                  /> */} #
+                  />  
                 </Link>
                 <div className="hidden sm:block sm:ml-6 ">
                   <div className="flex items-center space-x-">
